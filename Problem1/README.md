@@ -2,16 +2,22 @@
 Create an API which allows applications to find breweries by state or by type.
 The API should interface with Open Brewery DB. While the API should have at least two endpoints, it does not have to be limited to just state and type.
 
+# How to run the api
+1. Install python 3
+2. Clone repository 
+3. Install requirements: `pip3 install -r requirements.txt`
+4. Run the app: `python3 api.py` (from the Problem1 directory)
+
 # API User Guide
 The API runs on `localhost:5000`. This can be changed by modifying the `host` and `port` variables in the constants.py file
 
 The API has the following endpoints:
-- `GET /Breweries`
+- `GET /breweries`
     - Returns a list of all breweries
-- `GET Breweries/Type/<brewery_type>`
+- `GET breweries/type/<brewery_type>`
     - Returns a list of all breweries of the type specified
     - Possible types: Same as the Open Brewery DB API by_type filter: 'micro','nano','regional','brewpub','large','planning','bar','contract','proprietor','closed'
-- `GET Breweries/State/<state>`
+- `GET breweries/state/<state>`
     - Returns a list of all breweries from the state specified
     - Possible states: All us states, use the full state name and replace spaces with underscores
 

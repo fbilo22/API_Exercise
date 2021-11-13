@@ -22,7 +22,7 @@ def getjsonfromOpenBreweryDBAPI(state=None,brewery_type=None,page=1):
     return requests.get(csts.base_url, params).json()
 
 
-### Flask API
+### Flask API ###
 app = Flask(__name__)
 api = Api(app)
 
@@ -41,9 +41,9 @@ class Type(Resource):
         page = request.args.get("page", 1, type=int) #process the "page" key
         return getjsonfromOpenBreweryDBAPI(brewery_type=brewery_type, page=page)
 
-api.add_resource(Breweries, '/Breweries')
-api.add_resource(State, '/Breweries/State/<string:state>')
-api.add_resource(Type, '/Breweries/Type/<string:brewery_type>')
+api.add_resource(Breweries, '/breweries')
+api.add_resource(State, '/breweries/state/<string:state>')
+api.add_resource(Type, '/breweries/type/<string:brewery_type>')
 
 if __name__ == '__main__':
     app.run(host=csts.host, port=csts.port)
