@@ -21,12 +21,15 @@ The API has the following endpoints:
     - Returns a list of all breweries from the state specified
     - Possible states: All us states, use the full state name and replace spaces with underscores
 
-GET requests examples:
-`http://localhost:5000/breweries`
-`http://localhost:5000/breweries/type/micro`
-`http://localhost:5000/breweries/state/ohio?page=6`
-
 Only the first 50 results are returned. use the 'page' key to get further results
+
+GET requests examples:
+
+`http://localhost:5000/breweries`
+
+`http://localhost:5000/breweries/type/micro`
+
+`http://localhost:5000/breweries/state/ohio?page=6`
 
 Response format:
 ```json
@@ -77,5 +80,5 @@ In the open brewery DB projects section, there is a python OPC wrapper for the A
 This will be a good example to use as reference
 
 When testing get requests to the open brewery DB, I see that only the first 50 breweries are returned.
-Further results can be retrieved using the `page` attribute in the get request.
+Further results can be retrieved using the `page` attribute in the GET request.
 In my API, I will have to extract the `page` key and its value to use it when sending the GET request to the Open Brewery DB API
