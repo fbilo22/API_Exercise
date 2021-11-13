@@ -16,10 +16,15 @@ The API has the following endpoints:
     - Returns a list of all breweries
 - `GET breweries/type/<brewery_type>`
     - Returns a list of all breweries of the type specified
-    - Possible types: Same as the Open Brewery DB API by_type filter: 'micro','nano','regional','brewpub','large','planning','bar','contract','proprietor','closed'
+    - Possible types: Same as the Open Brewery DB API by_type filter: `micro`,`nano`,`regional`,`brewpub`,`large`,`planning`,`bar`,`contract`,`proprietor`,`closed`
 - `GET breweries/state/<state>`
     - Returns a list of all breweries from the state specified
     - Possible states: All us states, use the full state name and replace spaces with underscores
+
+GET requests examples:
+`http://localhost:5000/breweries`
+`http://localhost:5000/breweries/type/micro`
+`http://localhost:5000/breweries/state/ohio?page=6`
 
 Only the first 50 results are returned. use the 'page' key to get further results
 
@@ -68,7 +73,7 @@ We'll simply return the same brewery data as the Open Brewery DB API
 I see that there is a python library called `requests` that allows sendings URL requests.
 I will use `requests.get` to call the Open Brewery DB API
 
-In the open brewery DB projects section, there is a python OPC wrapper for the API that uses the `requests` API.
+In the open brewery DB projects section, there is a python OPC wrapper for the API that uses the `requests` library.
 This will be a good example to use as reference
 
 When testing get requests to the open brewery DB, I see that only the first 50 breweries are returned.
