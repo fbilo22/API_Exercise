@@ -4,9 +4,9 @@ The API should interface with Open Brewery DB. While the API should have at leas
 
 # How to run the api
 1. Install python 3
-2. Clone repository 
+2. Clone repository and access the Problem1 folder
 3. Install requirements: `pip3 install -r requirements.txt`
-4. Run the app: `python3 api.py` (from the Problem1 directory)
+4. Run the app: `python3 api.py`
 
 # API User Guide
 The API runs on `localhost:5000`. This can be changed by modifying the `host` and `port` variables in the constants.py file
