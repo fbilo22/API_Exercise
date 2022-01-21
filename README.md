@@ -1,6 +1,5 @@
-# Kegshoe_Task
-Kegshoe Take Home Task
+# API Exercice
+API Creation Exercise
 
-I created 2 separate folders for Problem 1 and Problem 2
-
+There are 2 folders for 2 problems to be solved.
 In each folder there is a readme.md file where I detail my thoughts and solution
